@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="vendors/jquery-3.4.1.min.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Calculator!</h1>
+    <div id="inputAndButtons">
+        <button id="sevenButton" value="7">7</button>
+        <button id="eightButton" value="8">8</button>
+        <button id="nineButton" value="9">9</button>
+        <button id="addButton" value="+">+</button>
+        <br />
+        <button id="fourButton" value="4">4</button>
+        <button id="fiveButton" value="5">5</button>
+        <button id="sixButton" value="6">6</button>
+        <button id="subtractButton" value="-">-</button>
+        <br />
+        <button id="oneButton" value="1">1</button>
+        <button id="twoButton" value="2">2</button>
+        <button id="threeButton" value="3">3</button>
+        <button id="multiplyButton" value="*">*</button>
+        <br />
+        <button id="zeroButton" value="0">0</button>
+      <button id="divideButton" value="/">/</button>
+      <button id="equalsButton" value="=">=</button>
+      <button id="clearButton">C</button>
+    </div>
+    <h3>Answer: <span id="answerOut"></span></h3>
+    <h4>Previous Answers:</h4>
+    <ul id="results">
+      <li></li>
+    </ul>
+  </body>
+</html>
