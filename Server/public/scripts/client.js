@@ -3,27 +3,26 @@ $(document).ready(onReady);
 let operator = "";
 // click listeners, function that fires on page load
 function onReady() {
-  //   console.log("onReady");
   $("#multiplyButton").on("click", multiplyFunction);
   $("#divideButton").on("click", divideFunction);
   $("#subtractButton").on("click", subtractFunction);
   $("#addButton").on("click", addFunction);
   $("#equalsButton").on("click", getResults);
-  $("#clearButton").on(
-    "click",
-    $("#numberOne").val(""),
-    $("#numberTwo").val("")
-  );
+  $("#clearButton").on("click", clearNumbers);
   backFromServer();
 }
+
+function clearNumbers() {
+  $("#numberOne").val(" "), $("#numberTwo").val(" ");
+}
+
 function getResults() {
-  //   console.log("in getResults");
   let numbersToSend = {
     numberOne: $("#numberOne").val(),
     numberTwo: $("#numberTwo").val(),
     operator: operator,
   };
-  //   console.log("attempting to post:", numbersToSend);
+
   // send to server via ajax post
 
   $.ajax({
