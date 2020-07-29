@@ -23,12 +23,14 @@ app.get("/calculations", (req, res) => {
 // getting post from client side with object to compute
 app.post("/addition", (req, res) => {
   allResults.unshift(req.body);
-  finishedCalculations.push({
+  finishedCalculations.unshift({
     numberOne: req.body.numberOne,
     numberTwo: req.body.numberTwo,
     operator: req.body.operator,
     result: calculateAnswer(),
   });
+  if (finishedCalculations.length > 10) finishedCalculations.pop();
+
   res.send(finishedCalculations);
 });
 

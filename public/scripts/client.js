@@ -32,7 +32,6 @@ function getResults() {
     contentType: "application/json; charset=utf-8",
   })
     .then(function (response) {
-      //   console.log("back from POST", response);
       backFromServer();
     })
     .catch(function (err) {
@@ -76,7 +75,7 @@ function backFromServer() {
         );
         // empty answers
         answer.empty();
-        answer.append(`${response[i].result}`);
+        answer.append(`${response[0].result}`);
       }
     })
     .catch(function (err) {
