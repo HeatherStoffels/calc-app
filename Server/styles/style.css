@@ -1,0 +1,26 @@
+h1 {
+    color: #045399;
+    padding-bottom: 20px;
+    margin-left: 30px;
+  }
+  h3{
+      padding-bottom: 20px;
+      margin-left: 30px;
+  }
+  #inputAndButtons {
+  padding-bottom: 20px;
+  margin-left: 30px;
+  }
+  h4{
+      padding-bottom: 20px;
+      margin-left: 30px;
+  }
+  #results{
+      margin-left: 20px;
+  }
+  #numberOne{
+      background-color: rgb(201, 228, 250);
+  }
+  #numberTwo{
+      background-color: rgb(201, 228, 250);
+  }
