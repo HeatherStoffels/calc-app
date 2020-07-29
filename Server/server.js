@@ -1,23 +1,19 @@
 // add requires
 const express = require("express");
 const app = express();
-
-// add uses
-app.use(express.static("server/public"));
-app.use(express.json());
+const path = require("path");
 
 // set up port
-//heroku || 5000
 const port = process.env.PORT || 5000;
+
 // area for variables
 let calculatedResult = 0;
 let finishedCalculations = [];
 let allResults = [];
 
-// set up app to listen for port 5000
-app.listen(port, () => {
-  console.log("in port:", port);
-});
+// add uses
+app.use(express.json());
+app.use("/", express.static(path.join(__dirname, "public")));
 
 // send get request back to client side with calculations
 app.get("/calculations", (req, res) => {
@@ -54,3 +50,8 @@ function calculateAnswer() {
   }
   return calculatedResult;
 }
+
+// set up app to listen for port 5000
+app.listen(port, () => {
+  console.log("in port:", port);
+});
